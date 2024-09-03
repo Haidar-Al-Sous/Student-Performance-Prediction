@@ -14,10 +14,11 @@ We have three labels we have to predict (these info were colletected at enrollme
 
 
 ### Semi-supervised learning
-The classes are imbalanced where we Graduate labels are the most then comes Dropout then Enrolled. Based on the assumption that the non-graduate labels (Dropout & Enrolled) are anomalies compared to graduate ones, and on the second assumption that Enrolled are anomalies compared to Dropout, we've tried two anomly detection algorithms, namely, Local outlier factor (LOF) & Isolation forest (IF).  
+The class labels are imbalanced, with "Graduate" being the most frequent, followed by "Dropout," and then "Enrolled."  Based on the assumption that the non-graduate labels ("Dropout" and "Enrolled") are anomalies compared to "Graduate," and on the further assumption that "Enrolled" is an anomaly compared to "Dropout," we have tried two anomaly detection algorithms: Local Outlier Factor (LOF) and Isolation Forest (IF). 
+
 This approach consists of two stages:
-1. **1st stage:** we seperate the data into two categories. The first one is Graduate and the second one is non-graduate. Then we apply anomly detection algorithms.
-2. **2nd stage:** we apply anomly detection algorithms on Dropout & Enrolled labels, where Enrolled are the anomalies.
+1. **1st stage:** We separate the data into two categories: Graduate and non-graduate. Then, we apply anomaly detection algorithms.
+2. **2nd stage:** We apply anomaly detection algorithms on the Dropout & Enrolled labels, where Enrolled represents the anomalies.
 
 We've got the following results:  
 | Algirthm  | F1 score |
