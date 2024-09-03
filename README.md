@@ -2,19 +2,40 @@
 ## Introduction
 This project explores various machine learning techniques to predict student performance in higher education. The study utilizes supervised, semi-supervised, and unsupervised learning algorithms to identify students at risk of academic failure.
 
-The project aims to develop a system that predicts students who may face academic difficulties, allowing for timely interventions. It uses data from the Higher Institute of Applied Arts in Portugal, including demographic, socio-economic, and academic factors. You can find it [here](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success).
+The project aims to develop a system that predicts students who may face academic difficulties, allowing for timely interventions. It uses data from the Higher Institute of Applied Arts in Portugal, including demographic, socio-economic, and academic factors. You can find the dataset [here](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success).
 
 We have three labels we have to predict (these info were colletected at enrollment):
-1. Dropout: it means the student is a dropout and has a very probability of dropping out.
-2. Enrolled: it means the is still still enrolled but a has moderate probability of dropping out.
-3. Graduate: the student is graduated and thus has a low probability of dropping out.
+1. **Dropout:** it means the student is a dropout and has a very probability of dropping out.
+2. **Enrolled:** it means the is still still enrolled but a has moderate probability of dropping out.
+3. **Graduate:** the student is graduated and thus has a low probability of dropping out.
 
 ## Methodology
 ### Supervised learning
 
 
 ### Semi-supervised learning
+The classes are imbalanced where we Graduate labels are the most then comes Dropout then Enrolled. Based on the assumption that the non-graduate labels (Dropout & Enrolled) are anomalies compared to graduate ones, and on the second assumption that Enrolled are anomalies compared to Dropout, we've tried two anomly detection algorithms, namely, Local outlier factor (LOF) & Isolation forest (IF).  
+This approach consists of two stages:
+1. **1st stage:** we seperate the data into two categories. The first one is Graduate and the second one is non-graduate. Then we apply anomly detection algorithms.
+2. **2nd stage:** we apply anomly detection algorithms on Dropout & Enrolled labels, where Enrolled are the anomalies.
 
+We've got the following results:  
+| Algirthm  | F1 score |
+|   :---:   |   :---:  |
+| LOF       | 0.33     |
+| IF        | 0.32     |
+
+Because there's data imbalance we tried `SMOTE` & `ADASYN`. We've got the following results:  
+| Oversampling algirthm  |  LOF  |  IF   |
+|   :---:                | :---: | :---: |
+| `SMOTE`                |  0.33 |  0.32 |
+| `ADASYN`               |  0.33 |  0.32 |
+
+We used `Optuna` for hyperparameter optimization + `ADASYN`:
+| Algirthm  | F1 score |
+|   :---:   |   :---:  |
+| LOF       | 0.33     |
+| IF        | 0.32     |
 
 ### Unsupervised learning
 
