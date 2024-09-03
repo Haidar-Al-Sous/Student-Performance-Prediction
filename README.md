@@ -22,9 +22,10 @@ The project aims to develop a system that predicts students who may face academi
 
 ## References
 
-- [Fern & Brodley (2004)](https://doi.org/10.1145/1015330.1015414)
-- [Martins et al. (2021)](https://doi.org/10.1007/978-3-030-72657-7_16)
-- [Villar & De Andrade (2024)](https://doi.org/10.1007/s44163-023-00079-z)
+[1]  Martins, M. V., Tolledo, D., Machado, J., Baptista, L. M. T., & Realinho, V. (2021). Early Prediction of student’s Performance in Higher Education: A Case Study. In Advances in intelligent systems and computing (pp. 166–175). https://doi.org/10.1007/978-3-030-72657-7_16  
+[2]  Villar, A., & De Andrade, C. R. V. (2024). Supervised machine learning algorithms for predicting student dropout and academic success: a comparative study. Discover Artificial Intelligence, 4(1).
+https://doi.org/10.1007/s44163-023-00079-z  
+[3]  Fern, X. Z., & Brodley, C. E. (2004). Solving cluster ensemble problems by bipartite graph partitioning. https://doi.org/10.1145/1015330.1015414
 
 ## Contributors
 - [Ahmad-AM0](https://github.com/Ahmad-AM0)
