@@ -21,7 +21,7 @@ This approach consists of two stages:
 2. **2nd stage:** We apply anomaly detection algorithms on the Dropout & Enrolled labels, where Enrolled represents the anomalies.
 
 We've got the following results:  
-| algorithm | F1 score |
+| Algorithm | F1 score |
 |   :---:   |   :---:  |
 | LOF       | 0.33     |
 | IF        | 0.32     |
@@ -33,14 +33,14 @@ Because there's data imbalance we tried `SMOTE` & `ADASYN`. We've got the follow
 | `ADASYN`               |  0.33 |  0.32 |
 
 We used `Optuna` for hyperparameter optimization + `ADASYN`:
-| algorithm | F1 score |
+| Algorithm | F1 score |
 |   :---:   |   :---:  |
 | LOF       | 0.33     |
 | IF        | 0.32     |
 
 ### Unsupervised learning
 We tried several clustering techniques and evaluated them using Normalized Mutual Info (NMI). We've got the following results:  
-| algorithm            | Kmeans | Kprototypes | Gaussian mixture | Bisecting kmeans |
+| Algorithm            | Kmeans | Kprototypes | Gaussian mixture | Bisecting kmeans |
 |   :---:              |  :---: |  :---:      | :---:            | :---:            |
 | Without oversampling | 0.0032 | 0.0105      | 0.0034           | 0.0032           |
 | `SMOTE`              | 0.0032 | 0.0102      | 0.0142           | 0.0032           |
