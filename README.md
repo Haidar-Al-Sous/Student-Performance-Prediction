@@ -39,7 +39,12 @@ We used `Optuna` for hyperparameter optimization + `ADASYN`:
 | IF        | 0.32     |
 
 ### Unsupervised learning
-
+We tried several clustering techniques and evaluated them using Normalized Mutual Info (NMI). We've got the following results:  
+| Algirthm             | Kmeans | Kprototypes | Gaussian mixture | Bisecting kmeans |
+|   :---:              |  :---: |  :---:      | :---:            | :---:            |
+| Without oversampling | 0.0032 | 0.0105      | 0.0034           | 0.0032           |
+| `SMOTE`              | 0.0032 | 0.0102      | 0.0142           | 0.0032           |
+| `ADASYN`             | 0.0032 | 0.0097      | 0.0034           | 0.0032           |
 
 ## Results
 
