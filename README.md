@@ -46,6 +46,17 @@ We tried several clustering techniques and evaluated them using Normalized Mutua
 | `SMOTE`              | 0.0032 | 0.0102      | 0.0142           | 0.0032           |
 | `ADASYN`             | 0.0032 | 0.0097      | 0.0034           | 0.0032           |
 
+We also tried clustering ensemble [3] by applying the following steps:
+1. We apply a clustering algorithm multiple times.
+2. After applying a clustering algorithm, we fill a NxN weight matrix, where N is the number of elements and clusters and W<sub>ij</sub> = 1 if element i belongs to cluster j.
+3. We perform graph partitioning using spectral clustering algorithm on the weight matrix.
+
+We applied Kmeans and Gaussian mixture for 100 iterations each and got the following results:
+| Algorithm        | NMI    |
+|   :---:          |  :---: |
+| Gaussian mixture | 0.0025 |
+| Kmeans           | 0.0025 |
+
 ## Results
 
 
