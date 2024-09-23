@@ -174,9 +174,6 @@ We applied Kmeans and Gaussian mixture for 100 iterations each and got the follo
 | Gaussian mixture | 0.0025 |
 | Kmeans           | 0.0025 |
 
-## Results
-
-
 ## References
 [1]  Martins, M. V., Tolledo, D., Machado, J., Baptista, L. M. T., & Realinho, V. (2021). Early Prediction of student’s Performance in Higher Education: A Case Study. In Advances in intelligent systems and computing (pp. 166–175). https://doi.org/10.1007/978-3-030-72657-7_16  
 [2]  Villar, A., & De Andrade, C. R. V. (2024). Supervised machine learning algorithms for predicting student dropout and academic success: a comparative study. Discover Artificial Intelligence, 4(1).
